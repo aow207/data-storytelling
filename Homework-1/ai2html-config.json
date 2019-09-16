@@ -1,0 +1,28 @@
+{
+    "fonts": [
+        {
+            "aifont": "BentonSans-Bold",
+            "family": "Benton Sans",
+            "weight": "700",
+            "style": ""
+        },
+        {
+            "aifont": "BentonSans-Book",
+            "family": "Benton Sans",
+            "weight": "200",
+            "style": ""
+        },
+        {
+            "aifont": "BentonSans-Medium",
+            "family": "Benton Sans",
+            "weight": "700",
+            "style": ""
+        },
+        {
+            "aifont": "Exo-Bold",
+            "family": "Exo",
+            "weight": "700",
+            "style": ""
+        },
+    ]
+}
