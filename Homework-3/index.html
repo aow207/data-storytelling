@@ -1,0 +1,1490 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+        body {
+            margin: auto;
+            padding: 50px 10px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .serif {
+            font-family: 'Lora', serif;
+        }
+
+        .sans-serif {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* choose a light or dark theme to add to the body tag. */
+        .dark-theme {
+            background-color: #1E1E1E;
+            color: #fbfbfb;
+        }
+
+        .light-theme {
+            background-color: white;
+            color: black;
+        }
+
+        .header {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .story-body,
+        .header,
+        .chart-section,
+        .footer {
+            margin: auto;
+            max-width: 700px;
+        }
+
+        .footer {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .chart-section.wide {
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .chart-section.wide p.chart-title {
+            width: 100%;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .chart-section.wide p.chart-subhead {
+            width: 100%;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* text styles */
+
+        p.kicker {
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        h1.headline {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 0.25rem;
+            margin-top: 1rem;
+            font-weight: 800;
+        }
+
+        h2.subhead {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            margin-bottom: 0;
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+        p.body-text {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        h3.section-head {
+            font-size: 2rem;
+            margin: 40px 0 10px 0;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .byline {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            line-height: 1;
+            margin-top: 10px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+
+        p.note {
+            font-size: 0.85rem;
+        }
+
+        .notice {
+            color: #ea8fab;
+        }
+
+        /* chart styles */
+
+        .chart-section {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px 0px;
+        }
+
+        .story-body .chart-section {
+            padding-top: 0px;
+        }
+
+
+        .chart-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        p.chart-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            max-width: 700px;
+            margin: 0px auto 5px auto;
+        }
+
+        p.chart-subhead {
+            margin: 0 auto;
+            max-width: 700px;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        p.chart-label {
+            margin: 0 0 5px 0;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .chart-row .chart {
+            width: 100%;
+            padding-right: 15px;
+            min-width: calc(25% - 15px);
+
+        }
+
+
+
+        p.chart-source {
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+
+
+
+
+        /* photos */
+
+        .photo-section {
+            padding: 30px 0px;
+            width: 100%;
+            margin: auto;
+            display: flex;
+            max-width: 1200px;
+        }
+
+        .photo {
+            width: 100%;
+            padding-right: 15px;
+        }
+
+        .photo img {
+            width: 100%;
+        }
+
+        p.caption {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+
+
+        /* mobile */
+
+        @media (max-width:700px) {
+
+            .chart-row {
+                display: block;
+            }
+
+            .chart-row .chart {
+                padding: 0;
+            }
+
+            .photo-section {
+                display: block;
+            }
+
+            .photo {
+                padding: 0;
+            }
+
+        }
+
+        #g-templates-laptop,
+        #g-templates-medium,
+        #g-templates-mobile {
+            display: none;
+        }
+
+        @media (max-width: 490px) {
+            #g-templates-mobile {
+                display: block;
+            }
+        }
+
+        @media (min-width: 490px) and (max-width: 620px) {
+            #g-templates-laptop {
+                display: block;
+            }
+        }
+
+        @media (min-width: 620px) {
+            #g-templates-medium {
+                display: block;
+            }
+        }
+
+    </style>
+
+    <!-- google fonts: Open Sans (sans-serif) and Lora (serif) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
+
+    <title>Vaccination Rates Vary Widely by School, County</title>
+</head>
+
+<body class="light-theme">
+    <!-- all of the content on your html page goes inside the body -->
+
+    <div class="header">
+        <p class="kicker">Health</p>
+        <h1 class="headline">Vaccination Rates Vary Widely by School, County</h1>
+        <h2 class="subhead">387 schools lie within the 80-95% range. This leaves roughly 26,000 students below the national average of 95%.</h2>
+        <p class="byline">Story By Jesse Howe | Graphics By Andrew Williams</p>
+        <p class="date">Published May 20, 2019</p>
+    </div>
+
+
+    <div class="story-body">
+        <p class="body-text serif">
+            <b class="notice">"Disclaimer: This story originally came from <a class="notice" href="https://oklahomawatch.org/2019/05/20/vaccination-rates-by-school-county/">Oklahoma Watch</a>. I created graphics for this piece for a course in the Columbia Journalism School." - Andrew Williams</b><br><br>
+
+            Oklahoma requires kindergarteners to be immunized against 10 diseases unless parents choose an exemption on medical, religious or personal grounds.<br><br>
+
+            In Oklahoma’s 2017-18 kindergarten immunization survey, an estimated 89.9% of kindergarteners with immunization records were up to date for all required vaccines. The rate of exemptions was 2.2%, matching the national median.<br><br></p>
+
+    </div>
+
+    <div class="chart-section">
+        <div class="chart-row">
+            <div class="chart">
+                <!-- Header Map -->
+
+                <!-- AI2HTML content goes here -->
+
+                <!-- Generated by ai2html v0.89.0 - 2019-09-15 18:14 -->
+                <!-- ai file: map.ai -->
+                <style type='text/css' media='screen,print'>
+                    #g-map-box .g-artboard {
+                        margin: 0 auto;
+                    }
+
+                    #g-map-box p {
+                        margin: 0;
+                    }
+
+                    .g-aiAbs {
+                        position: absolute;
+                    }
+
+                    .g-aiImg {
+                        display: block;
+                        width: 100% !important;
+                    }
+
+                    .g-aiSymbol {
+                        position: absolute;
+                        box-sizing: border-box;
+                    }
+
+                    .g-aiPointText p {
+                        white-space: nowrap;
+                    }
+
+                    #g-map-medium {
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    #g-map-medium p {
+                        font-family: inherit;
+                        font-weight: 200;
+                        font-size: 14px;
+                        line-height: 17px;
+                        filter: alpha(opacity=100);
+                        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+                        opacity: 1;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: rgb(0, 0, 0);
+                        text-transform: none;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                        mix-blend-mode: normal;
+                        font-style: normal;
+                        height: auto;
+                        position: static;
+                    }
+
+                    #g-map-medium .g-pstyle0 {
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+
+                    #g-map-medium .g-pstyle1 {
+                        font-family: Exo;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+
+                    #g-map-medium .g-pstyle2 {
+                        font-family: Exo;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 14px;
+                        text-align: right;
+                    }
+
+                    #g-map-medium .g-pstyle3 {
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+
+                    #g-map-medium .g-cstyle0 {
+                        font-weight: 700;
+                    }
+
+                    #g-map-Artboard_4 {
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    #g-map-Artboard_4 p {
+                        font-family: inherit;
+                        font-weight: 200;
+                        font-size: 14px;
+                        line-height: 17px;
+                        filter: alpha(opacity=100);
+                        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+                        opacity: 1;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: rgb(0, 0, 0);
+                        text-transform: none;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                        mix-blend-mode: normal;
+                        font-style: normal;
+                        height: auto;
+                        position: static;
+                    }
+
+                    #g-map-Artboard_4 .g-pstyle0 {
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+
+                    #g-map-Artboard_4 .g-pstyle1 {
+                        font-family: Exo;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+
+                    #g-map-Artboard_4 .g-pstyle2 {
+                        font-family: Exo;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 14px;
+                        text-align: right;
+                    }
+
+                    #g-map-Artboard_4 .g-pstyle3 {
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+
+                    #g-map-Artboard_4 .g-cstyle0 {
+                        font-weight: 700;
+                    }
+
+                    #g-map-Artboard_5 {
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    #g-map-Artboard_5 p {
+                        font-family: inherit;
+                        font-weight: 200;
+                        font-size: 14px;
+                        line-height: 17px;
+                        filter: alpha(opacity=100);
+                        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+                        opacity: 1;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: rgb(0, 0, 0);
+                        text-transform: none;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                        mix-blend-mode: normal;
+                        font-style: normal;
+                        height: auto;
+                        position: static;
+                    }
+
+                    #g-map-Artboard_5 .g-pstyle0 {
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+
+                    #g-map-Artboard_5 .g-pstyle1 {
+                        font-family: Exo;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+
+                    #g-map-Artboard_5 .g-pstyle2 {
+                        font-family: Exo;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 14px;
+                        text-align: right;
+                    }
+
+                    #g-map-Artboard_5 .g-pstyle3 {
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+
+                    #g-map-Artboard_5 .g-cstyle0 {
+                        font-weight: 700;
+                    }
+
+                </style>
+
+                <div id="g-map-box" class="ai2html">
+
+                    <!-- Artboard: medium -->
+                    <div id="g-map-medium" class="g-artboard" style="width:620px; height:452px;" data-aspect-ratio="1.372" data-min-width="620">
+                        <img id="g-map-medium-img" class="g-aiImg g-aiAbs" alt="" src="map-medium.png" />
+                        <div id="g-ai0-1" class="g-ai2html-settings g-aiAbs" style="top:3.7611%;left:3.6221%;width:89.1935%;">
+                            <p class="g-pstyle0">Vaccination Rates by County</p>
+                        </div>
+                        <div id="g-ai0-2" class="g-ai2html-settings g-aiAbs" style="top:8.8496%;left:3.6221%;width:91.4516%;">
+                            <p>Here are vaccination rates for public and private schools that reported for 2017-18. Cotton county came in the lowest with a vaccination rate of 54%, while Tillman county saw a 100% vaccination rate.</p>
+                        </div>
+                        <div id="g-ai0-3" class="g-ai2html-settings g-aiAbs" style="top:86.9469%;left:3.5754%;width:5.3226%;">
+                            <p class="g-pstyle1">60%</p>
+                        </div>
+                        <div id="g-ai0-4" class="g-ai2html-settings g-aiAbs" style="top:86.9469%;right:82.9032%;width:5.6452%;">
+                            <p class="g-pstyle2">100%</p>
+                        </div>
+                        <div id="g-ai0-5" class="g-ai2html-settings g-aiAbs" style="top:93.3628%;left:3.6221%;width:80.6452%;">
+                            <p class="g-pstyle3"><span class="g-cstyle0">Graphic </span>Andrew Williams | <span class="g-cstyle0">Source </span>Oklahoma State Department of Health</p>
+                        </div>
+                    </div>
+
+                    <!-- Artboard: Artboard_4 -->
+                    <div id="g-map-Artboard_4" class="g-artboard" style="width:490px; height:428px;" data-aspect-ratio="1.145" data-min-width="490" data-max-width="619">
+                        <img id="g-map-Artboard_4-img" class="g-aiImg g-aiAbs" alt="" src="map-Artboard_4.png" />
+                        <div id="g-ai1-1" class="g-ai2html-settings g-aiAbs" style="top:6.5421%;left:5.1953%;width:55.102%;">
+                            <p class="g-pstyle0">Vaccination Rates by County</p>
+                        </div>
+                        <div id="g-ai1-2" class="g-ai2html-settings g-aiAbs" style="top:11.9159%;left:5.1953%;width:90.6122%;">
+                            <p>Here are vaccination rates for public and private schools that reported for 2017-18. Cotton county came in the lowest with a vaccination rate of 54%, while Tillman county saw a 100% vaccination rate.</p>
+                        </div>
+                        <div id="g-ai1-3" class="g-ai2html-settings g-aiAbs" style="top:82.9439%;left:32.2449%;width:7.1429%;">
+                            <p class="g-pstyle1">100%</p>
+                        </div>
+                        <div id="g-ai1-4" class="g-ai2html-settings g-aiAbs" style="top:82.9439%;right:88.9796%;width:5.5102%;">
+                            <p class="g-pstyle2">60%</p>
+                        </div>
+                        <div id="g-ai1-5" class="g-ai2html-settings g-aiAbs" style="top:88.3178%;left:5.1953%;width:52.8571%;">
+                            <p class="g-pstyle3"><span class="g-cstyle0">Graphic </span>Andrew Williams</p>
+                            <p class="g-pstyle3"><span class="g-cstyle0">Source </span>Oklahoma State Department of Health</p>
+                        </div>
+                    </div>
+
+                    <!-- Artboard: Artboard_5 -->
+                    <div id="g-map-Artboard_5" class="g-artboard" style="width:375px; height:351.799999999999px;" data-aspect-ratio="1.066" data-min-width="375" data-max-width="489">
+                        <img id="g-map-Artboard_5-img" class="g-aiImg g-aiAbs" alt="" src="map-Artboard_5.png" />
+                        <div id="g-ai2-1" class="g-ai2html-settings g-aiAbs" style="top:5.1165%;left:4.1219%;width:72%;">
+                            <p class="g-pstyle0">Vaccination Rates by County</p>
+                        </div>
+                        <div id="g-ai2-2" class="g-ai2html-settings g-aiAbs" style="top:11.6543%;left:4.1219%;width:91.4667%;">
+                            <p>Cotton county came in the lowest with a vaccination rate of 54%, while Tillman county saw a 100% vaccination rate.</p>
+                        </div>
+                        <div id="g-ai2-3" class="g-ai2html-settings g-aiAbs" style="top:78.1694%;left:39.4667%;width:9.3333%;">
+                            <p class="g-pstyle1">100%</p>
+                        </div>
+                        <div id="g-ai2-4" class="g-ai2html-settings g-aiAbs" style="top:78.1694%;right:88.2667%;width:7.2%;">
+                            <p class="g-pstyle2">60%</p>
+                        </div>
+                        <div id="g-ai2-5" class="g-ai2html-settings g-aiAbs" style="top:87.5497%;left:4.1219%;width:69.0667%;">
+                            <p class="g-pstyle3"><span class="g-cstyle0">Graphic </span>Andrew Williams</p>
+                            <p class="g-pstyle3"><span class="g-cstyle0">Source </span>Oklahoma State Department of Health</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- End ai2html - 2019-09-15 18:14 -->
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="story-body">
+        <p class="body-text serif">
+            But there are individual schools and areas with relatively high exemption rates and low vaccination rates. This map shows the 2017-18 rates for kindergarteners in each Oklahoma county. Schools voluntarily reported data.<br><br>
+
+            There are at least 778 public, private, and charter schools in Oklahoma with vaccination records on file. In 2017-18, 89% of public schools, and 42% of private schools, volunteered to report. Among public schools, over a third have immunization rates at or above 95%. About a third of private schools are at least 95% vaccinated. Oklahoma City Public Schools, the largest district in the state, has 20 of its 54 elementary schools within the the 95% and above range; Tulsa Public Schools has only 4 of its 50 elementary schools at or above 95%.*</p>
+    </div>
+
+    <div class="chart-section">
+        <div class="chart-row">
+            <div class="chart">
+
+                <!--- PASTE YOUR AI2HTML AFTER THIS LINE -->
+
+
+                <!-- Generated by ai2html v0.89.0 - 2019-09-15 19:28 -->
+                <!-- ai file: bars.ai -->
+                <style type='text/css' media='screen,print'>
+                    #g-bars-box .g-artboard {
+                        margin: 0 auto;
+                    }
+
+                    #g-bars-box p {
+                        margin: 0;
+                    }
+
+                    .g-aiAbs {
+                        position: absolute;
+                    }
+
+                    .g-aiImg {
+                        display: block;
+                        width: 100% !important;
+                    }
+
+                    .g-aiSymbol {
+                        position: absolute;
+                        box-sizing: border-box;
+                    }
+
+                    .g-aiPointText p {
+                        white-space: nowrap;
+                    }
+
+                    #g-bars-medium {
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    #g-bars-medium p {
+                        font-family: inherit;
+                        font-weight: 200;
+                        font-size: 14px;
+                        line-height: 17px;
+                        filter: alpha(opacity=100);
+                        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+                        opacity: 1;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: rgb(0, 0, 0);
+                        text-transform: none;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                        mix-blend-mode: normal;
+                        font-style: normal;
+                        height: auto;
+                        position: static;
+                    }
+
+                    #g-bars-medium .g-pstyle0 {
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+
+                    #g-bars-medium .g-pstyle1 {
+                        height: 17px;
+                    }
+
+                    #g-bars-medium .g-pstyle2 {
+                        height: 17px;
+                        text-align: right;
+                    }
+
+                    #g-bars-medium .g-pstyle3 {
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+
+                    #g-bars-medium .g-cstyle0 {
+                        font-weight: 700;
+                    }
+
+                    #g-bars-Artboard_4 {
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    #g-bars-Artboard_4 p {
+                        font-family: inherit;
+                        font-weight: 200;
+                        font-size: 14px;
+                        line-height: 17px;
+                        filter: alpha(opacity=100);
+                        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+                        opacity: 1;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: rgb(0, 0, 0);
+                        text-transform: none;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                        mix-blend-mode: normal;
+                        font-style: normal;
+                        height: auto;
+                        position: static;
+                    }
+
+                    #g-bars-Artboard_4 .g-pstyle0 {
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+
+                    #g-bars-Artboard_4 .g-pstyle1 {
+                        height: 17px;
+                    }
+
+                    #g-bars-Artboard_4 .g-pstyle2 {
+                        height: 17px;
+                        text-align: right;
+                    }
+
+                    #g-bars-Artboard_4 .g-pstyle3 {
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+
+                    #g-bars-Artboard_4 .g-cstyle0 {
+                        font-weight: 700;
+                    }
+
+                    #g-bars-Artboard_5 {
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    #g-bars-Artboard_5 p {
+                        font-family: inherit;
+                        font-weight: 200;
+                        font-size: 14px;
+                        line-height: 17px;
+                        filter: alpha(opacity=100);
+                        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+                        opacity: 1;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: rgb(0, 0, 0);
+                        text-transform: none;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                        mix-blend-mode: normal;
+                        font-style: normal;
+                        height: auto;
+                        position: static;
+                    }
+
+                    #g-bars-Artboard_5 .g-pstyle0 {
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+
+                    #g-bars-Artboard_5 .g-pstyle1 {
+                        height: 17px;
+                    }
+
+                    #g-bars-Artboard_5 .g-pstyle2 {
+                        height: 17px;
+                        text-align: right;
+                    }
+
+                    #g-bars-Artboard_5 .g-pstyle3 {
+                        height: 17px;
+                        text-align: center;
+                    }
+
+                    #g-bars-Artboard_5 .g-pstyle4 {
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+
+                    #g-bars-Artboard_5 .g-cstyle0 {
+                        font-weight: 700;
+                    }
+
+                </style>
+
+                <div id="g-bars-box" class="ai2html">
+
+                    <!-- Artboard: medium -->
+                    <div id="g-bars-medium" class="g-artboard" style="width:620px; height:421px;" data-aspect-ratio="1.473" data-min-width="620">
+                        <img id="g-bars-medium-img" class="g-aiImg g-aiAbs" alt="" src="bars-medium.png" />
+                        <div id="g-ai0-1" class="g-ai2html-settings g-aiAbs" style="top:4.038%;left:3.6221%;width:89.1935%;">
+                            <p class="g-pstyle0">Students with Current Vaccinations</p>
+                        </div>
+                        <div id="g-ai0-2" class="g-ai2html-settings g-aiAbs" style="top:9.5012%;left:3.6221%;width:91.4516%;">
+                            <p>Public schools outpace private schools in vaccinations. Roughly 2% of students are exempt from vaccinations at public schools compared to 5% at private schools.</p>
+                        </div>
+                        <div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.1494%;margin-top:-9.2px;left:21.0723%;width:67px;">
+                            <p class="g-pstyle1">Private</p>
+                        </div>
+                        <div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.1494%;margin-top:-9.2px;left:7.8465%;width:61px;">
+                            <p class="g-pstyle1">Public</p>
+                        </div>
+                        <div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:32.6007%;margin-top:-9.2px;right:89.0347%;width:55px;">
+                            <p class="g-pstyle2">DTaP</p>
+                        </div>
+                        <div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:41.8644%;margin-top:-9.2px;right:89.1088%;width:53px;">
+                            <p class="g-pstyle2">Polio</p>
+                        </div>
+                        <div id="g-ai0-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:50.8905%;margin-top:-9.2px;right:89.0586%;width:56px;">
+                            <p class="g-pstyle2">MMR</p>
+                        </div>
+                        <div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:60.1542%;margin-top:-9.2px;right:89.0853%;width:61px;">
+                            <p class="g-pstyle2">Hep B</p>
+                        </div>
+                        <div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:69.4178%;margin-top:-9.2px;right:89.084%;width:60px;">
+                            <p class="g-pstyle2">Hep A</p>
+                        </div>
+                        <div id="g-ai0-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:78.6815%;margin-top:-9.2px;right:89.0911%;width:76px;">
+                            <p class="g-pstyle2">Varicella</p>
+                        </div>
+                        <div id="g-ai0-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:87.4701%;margin-top:-9.2px;right:85.8305%;width:45px;">
+                            <p class="g-pstyle2">0%</p>
+                        </div>
+                        <div id="g-ai0-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:87.4701%;margin-top:-9.2px;right:68.5844%;width:39px;">
+                            <p class="g-pstyle2">20</p>
+                        </div>
+                        <div id="g-ai0-13" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:87.4701%;margin-top:-9.2px;right:52.0342%;width:40px;">
+                            <p class="g-pstyle2">40</p>
+                        </div>
+                        <div id="g-ai0-14" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:87.4701%;margin-top:-9.2px;right:35.6181%;width:40px;">
+                            <p class="g-pstyle2">60</p>
+                        </div>
+                        <div id="g-ai0-15" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:87.4701%;margin-top:-9.2px;right:19.1921%;width:40px;">
+                            <p class="g-pstyle2">80</p>
+                        </div>
+                        <div id="g-ai0-16" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:87.4701%;margin-top:-9.2px;right:2.3311%;width:46px;">
+                            <p class="g-pstyle2">100</p>
+                        </div>
+                        <div id="g-ai0-17" class="g-ai2html-settings g-aiAbs" style="top:93.1116%;left:3.6221%;width:80.6452%;">
+                            <p class="g-pstyle3"><span class="g-cstyle0">Graphic </span>Andrew Williams | <span class="g-cstyle0">Source </span>Oklahoma State Department of Health</p>
+                        </div>
+                    </div>
+
+                    <!-- Artboard: Artboard_4 -->
+                    <div id="g-bars-Artboard_4" class="g-artboard" style="width:490px; height:393px;" data-aspect-ratio="1.247" data-min-width="490" data-max-width="619">
+                        <img id="g-bars-Artboard_4-img" class="g-aiImg g-aiAbs" alt="" src="bars-Artboard_4.png" />
+                        <div id="g-ai1-1" class="g-ai2html-settings g-aiAbs" style="top:4.3257%;left:3.5627%;width:92.6531%;">
+                            <p class="g-pstyle0">Students with Current Vaccinations</p>
+                        </div>
+                        <div id="g-ai1-2" class="g-ai2html-settings g-aiAbs" style="top:10.1781%;left:3.5627%;width:92.6531%;">
+                            <p>Public schools outpace private schools in vaccinations. Roughly 2% of students are exempt from vaccinations at public schools compared to 5% at private schools.</p>
+                        </div>
+                        <div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:28.8165%;margin-top:-9.2px;left:25.6425%;width:67px;">
+                            <p class="g-pstyle1">Private</p>
+                        </div>
+                        <div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:28.8165%;margin-top:-9.2px;left:8.9078%;width:61px;">
+                            <p class="g-pstyle1">Public</p>
+                        </div>
+                        <div id="g-ai1-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:38.9947%;margin-top:-9.2px;right:85.3984%;width:55px;">
+                            <p class="g-pstyle2">DTaP</p>
+                        </div>
+                        <div id="g-ai1-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:46.1193%;margin-top:-9.2px;right:85.4923%;width:53px;">
+                            <p class="g-pstyle2">Polio</p>
+                        </div>
+                        <div id="g-ai1-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:52.9896%;margin-top:-9.2px;right:85.4285%;width:56px;">
+                            <p class="g-pstyle2">MMR</p>
+                        </div>
+                        <div id="g-ai1-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:60.1143%;margin-top:-9.2px;right:85.4624%;width:61px;">
+                            <p class="g-pstyle2">Hep B</p>
+                        </div>
+                        <div id="g-ai1-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:67.2389%;margin-top:-9.2px;right:85.4608%;width:60px;">
+                            <p class="g-pstyle2">Hep A</p>
+                        </div>
+                        <div id="g-ai1-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:74.3636%;margin-top:-9.2px;right:85.4697%;width:76px;">
+                            <p class="g-pstyle2">Varicella</p>
+                        </div>
+                        <div id="g-ai1-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:80.9794%;margin-top:-9.2px;right:81.9782%;width:45px;">
+                            <p class="g-pstyle2">0%</p>
+                        </div>
+                        <div id="g-ai1-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:80.9794%;margin-top:-9.2px;right:66.3728%;width:39px;">
+                            <p class="g-pstyle2">20</p>
+                        </div>
+                        <div id="g-ai1-13" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:80.9794%;margin-top:-9.2px;right:51.3349%;width:40px;">
+                            <p class="g-pstyle2">40</p>
+                        </div>
+                        <div id="g-ai1-14" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:80.9794%;margin-top:-9.2px;right:36.4575%;width:40px;">
+                            <p class="g-pstyle2">60</p>
+                        </div>
+                        <div id="g-ai1-15" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:80.9794%;margin-top:-9.2px;right:21.5629%;width:40px;">
+                            <p class="g-pstyle2">80</p>
+                        </div>
+                        <div id="g-ai1-16" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:80.9794%;margin-top:-9.2px;right:6.3098%;width:46px;">
+                            <p class="g-pstyle2">100</p>
+                        </div>
+                        <div id="g-ai1-17" class="g-ai2html-settings g-aiAbs" style="top:88.5496%;left:5.1953%;width:52.8571%;">
+                            <p class="g-pstyle3"><span class="g-cstyle0">Graphic </span>Andrew Williams</p>
+                            <p class="g-pstyle3"><span class="g-cstyle0">Source </span>Oklahoma State Department of Health</p>
+                        </div>
+                    </div>
+
+                    <!-- Artboard: Artboard_5 -->
+                    <div id="g-bars-Artboard_5" class="g-artboard" style="width:375px; height:444.799999999997px;" data-aspect-ratio="0.843" data-min-width="375" data-max-width="489">
+                        <img id="g-bars-Artboard_5-img" class="g-aiImg g-aiAbs" alt="" src="bars-Artboard_5.png" />
+                        <div id="g-ai2-1" class="g-ai2html-settings g-aiAbs" style="top:2.2482%;left:3.0552%;width:85.6%;">
+                            <p class="g-pstyle0">Students with Current Vaccinations</p>
+                        </div>
+                        <div id="g-ai2-2" class="g-ai2html-settings g-aiAbs" style="top:7.4191%;left:3.0552%;width:93.3333%;">
+                            <p>Public schools outpace private schools in vaccinations. Roughly 2% of students are exempt from vaccinations at public schools compared to 5% at private schools.</p>
+                        </div>
+                        <div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:23.6621%;margin-top:-9.2px;left:31.9867%;width:67px;">
+                            <p class="g-pstyle1">Private</p>
+                        </div>
+                        <div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:23.6621%;margin-top:-9.2px;left:10.1201%;width:61px;">
+                            <p class="g-pstyle1">Public</p>
+                        </div>
+                        <div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:31.7556%;margin-top:-9.2px;right:89.8708%;width:46px;">
+                            <p class="g-pstyle2">100</p>
+                        </div>
+                        <div id="g-ai2-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:41.8725%;margin-top:-9.2px;right:89.7234%;width:40px;">
+                            <p class="g-pstyle2">80</p>
+                        </div>
+                        <div id="g-ai2-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:51.9894%;margin-top:-9.2px;right:89.7385%;width:40px;">
+                            <p class="g-pstyle2">60</p>
+                        </div>
+                        <div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:62.3312%;margin-top:-9.2px;right:89.7198%;width:40px;">
+                            <p class="g-pstyle2">40</p>
+                        </div>
+                        <div id="g-ai2-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:72.4481%;margin-top:-9.2px;right:89.8781%;width:39px;">
+                            <p class="g-pstyle2">20</p>
+                        </div>
+                        <div id="g-ai2-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:82.565%;margin-top:-9.2px;right:88.1453%;width:45px;">
+                            <p class="g-pstyle2">0%</p>
+                        </div>
+                        <div id="g-ai2-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:84.5884%;margin-top:-9.2px;left:18.2685%;margin-left:-27.5px;width:55px;">
+                            <p class="g-pstyle3">DTaP</p>
+                        </div>
+                        <div id="g-ai2-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:84.5884%;margin-top:-9.2px;left:31.7471%;margin-left:-26.5px;width:53px;">
+                            <p class="g-pstyle3">Polio</p>
+                        </div>
+                        <div id="g-ai2-13" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:84.5884%;margin-top:-9.2px;left:45.3289%;margin-left:-28px;width:56px;">
+                            <p class="g-pstyle3">MMR</p>
+                        </div>
+                        <div id="g-ai2-14" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:84.5884%;margin-top:-9.2px;left:58.8469%;margin-left:-30.5px;width:61px;">
+                            <p class="g-pstyle3">Hep B</p>
+                        </div>
+                        <div id="g-ai2-15" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:84.5884%;margin-top:-9.2px;left:72.3878%;margin-left:-30px;width:60px;">
+                            <p class="g-pstyle3">Hep A</p>
+                        </div>
+                        <div id="g-ai2-16" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:84.5884%;margin-top:-9.2px;left:85.9219%;margin-left:-38px;width:76px;">
+                            <p class="g-pstyle3">Varicella</p>
+                        </div>
+                        <div id="g-ai2-17" class="g-ai2html-settings g-aiAbs" style="top:91.0522%;left:3.0552%;width:69.0667%;">
+                            <p class="g-pstyle4"><span class="g-cstyle0">Graphic </span>Andrew Williams</p>
+                            <p class="g-pstyle4"><span class="g-cstyle0">Source </span>Oklahoma State Department of Health</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- End ai2html - 2019-09-15 19:28 -->
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="story-body">
+        <p class="body-text serif">Oklahoma kindergarteners are required to be vaccinated for 10 diseases, unless they receive exemptions: diphtheria, tetanus, pertussis, measles, mumps, rubella, chickenpox, polio, hepatitis A and hepatitis B. <br><br>
+            387 schools lie within the 80-95% range. This leaves roughly 26,000 students below the national average of 95%. These schools comprise 54% of all students in the state including 55% of public school students, 46% of private school students, and 24% of charter school students.<br><br>
+            94 schools lie below 80% and 6 below 50%. At least 49 schools below the 80% mark have zero exemptions.
+
+        </p>
+    </div>
+
+    <div class="chart-section">
+        <div class="chart-row">
+            <div class="chart">
+
+                <!-- AI2HTML content goes here -->
+
+                <!-- Generated by ai2html v0.89.0 - 2019-09-15 21:36 -->
+                <!-- ai file: exempt.ai -->
+                <style type='text/css' media='screen,print'>
+                    #g-exempt-box .g-artboard {
+                        margin: 0 auto;
+                    }
+
+                    #g-exempt-box p {
+                        margin: 0;
+                    }
+
+                    .g-aiAbs {
+                        position: absolute;
+                    }
+
+                    .g-aiImg {
+                        display: block;
+                        width: 100% !important;
+                    }
+
+                    .g-aiSymbol {
+                        position: absolute;
+                        box-sizing: border-box;
+                    }
+
+                    .g-aiPointText p {
+                        white-space: nowrap;
+                    }
+
+                    #g-exempt-medium {
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    #g-exempt-medium p {
+                        font-family: inherit;
+                        font-weight: 200;
+                        font-size: 14px;
+                        line-height: 17px;
+                        filter: alpha(opacity=100);
+                        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+                        opacity: 1;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: rgb(0, 0, 0);
+                        text-transform: none;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                        mix-blend-mode: normal;
+                        font-style: normal;
+                        height: auto;
+                        position: static;
+                    }
+
+                    #g-exempt-medium .g-pstyle0 {
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+
+                    #g-exempt-medium .g-pstyle1 {
+                        height: 17px;
+                        text-align: center;
+                    }
+
+                    #g-exempt-medium .g-pstyle2 {
+                        height: 17px;
+                    }
+
+                    #g-exempt-medium .g-pstyle3 {
+                        font-size: 12px;
+                        line-height: 14px;
+                        height: 14px;
+                        color: rgb(102, 102, 102);
+                    }
+
+                    #g-exempt-medium .g-pstyle4 {
+                        height: 17px;
+                        text-align: right;
+                    }
+
+                    #g-exempt-medium .g-pstyle5 {
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+
+                    #g-exempt-medium .g-cstyle0 {
+                        font-weight: 700;
+                        color: rgb(235, 148, 174);
+                    }
+
+                    #g-exempt-medium .g-cstyle1 {
+                        font-weight: 700;
+                    }
+
+                    #g-exempt-Artboard_4 {
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    #g-exempt-Artboard_4 p {
+                        font-family: inherit;
+                        font-weight: 200;
+                        font-size: 14px;
+                        line-height: 17px;
+                        filter: alpha(opacity=100);
+                        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+                        opacity: 1;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: rgb(0, 0, 0);
+                        text-transform: none;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                        mix-blend-mode: normal;
+                        font-style: normal;
+                        height: auto;
+                        position: static;
+                    }
+
+                    #g-exempt-Artboard_4 .g-pstyle0 {
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+
+                    #g-exempt-Artboard_4 .g-pstyle1 {
+                        height: 17px;
+                        text-align: center;
+                        color: rgb(51, 51, 51);
+                    }
+
+                    #g-exempt-Artboard_4 .g-pstyle2 {
+                        font-size: 12px;
+                        line-height: 14px;
+                        height: 14px;
+                        color: rgb(102, 102, 102);
+                    }
+
+                    #g-exempt-Artboard_4 .g-pstyle3 {
+                        height: 17px;
+                        text-align: right;
+                        color: rgb(51, 51, 51);
+                    }
+
+                    #g-exempt-Artboard_4 .g-pstyle4 {
+                        height: 17px;
+                        color: rgb(51, 51, 51);
+                    }
+
+                    #g-exempt-Artboard_4 .g-pstyle5 {
+                        height: 17px;
+                    }
+
+                    #g-exempt-Artboard_4 .g-pstyle6 {
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+
+                    #g-exempt-Artboard_4 .g-cstyle0 {
+                        font-weight: 700;
+                        color: rgb(235, 148, 174);
+                    }
+
+                    #g-exempt-Artboard_4 .g-cstyle1 {
+                        font-weight: 700;
+                    }
+
+                    #g-exempt-Artboard_5 {
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    #g-exempt-Artboard_5 p {
+                        font-family: inherit;
+                        font-weight: 200;
+                        font-size: 14px;
+                        line-height: 17px;
+                        filter: alpha(opacity=100);
+                        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+                        opacity: 1;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: rgb(0, 0, 0);
+                        text-transform: none;
+                        padding-bottom: 0;
+                        padding-top: 0;
+                        mix-blend-mode: normal;
+                        font-style: normal;
+                        height: auto;
+                        position: static;
+                    }
+
+                    #g-exempt-Artboard_5 .g-pstyle0 {
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+
+                    #g-exempt-Artboard_5 .g-pstyle1 {
+                        height: 17px;
+                        text-align: center;
+                        color: rgb(51, 51, 51);
+                    }
+
+                    #g-exempt-Artboard_5 .g-pstyle2 {
+                        font-size: 12px;
+                        line-height: 14px;
+                        height: 14px;
+                        color: rgb(102, 102, 102);
+                    }
+
+                    #g-exempt-Artboard_5 .g-pstyle3 {
+                        height: 17px;
+                        text-align: right;
+                        color: rgb(51, 51, 51);
+                    }
+
+                    #g-exempt-Artboard_5 .g-pstyle4 {
+                        height: 17px;
+                        color: rgb(51, 51, 51);
+                    }
+
+                    #g-exempt-Artboard_5 .g-pstyle5 {
+                        height: 17px;
+                    }
+
+                    #g-exempt-Artboard_5 .g-pstyle6 {
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+
+                    #g-exempt-Artboard_5 .g-cstyle0 {
+                        font-weight: 700;
+                        color: rgb(235, 148, 174);
+                    }
+
+                    #g-exempt-Artboard_5 .g-cstyle1 {
+                        font-weight: 700;
+                    }
+
+                </style>
+
+                <div id="g-exempt-box" class="ai2html">
+
+                    <!-- Artboard: medium -->
+                    <div id="g-exempt-medium" class="g-artboard" style="width:620px; height:421px;" data-aspect-ratio="1.473" data-min-width="620">
+                        <img id="g-exempt-medium-img" class="g-aiImg g-aiAbs" alt="" src="exempt-medium.png" />
+                        <div id="g-ai0-1" class="g-ai2html-settings g-aiAbs" style="top:4.038%;left:3.6221%;width:89.1935%;">
+                            <p class="g-pstyle0">Students with Vaccination Exemptions</p>
+                        </div>
+                        <div id="g-ai0-2" class="g-ai2html-settings g-aiAbs" style="top:9.5012%;left:3.6221%;width:91.4516%;">
+                            <p>Students with vaccination exemptions usually require them for non-medical reasons. Nearly 2% of public school students and 3% of private school students have non-medical vaccination exemptions for all types of vaccines.</p>
+                        </div>
+                        <div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:21.1993%;margin-top:-9.2px;left:67.5102%;margin-left:-27.5px;width:55px;">
+                            <p class="g-pstyle1">DTaP</p>
+                        </div>
+                        <div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:24.7622%;margin-top:-9.2px;left:7.8057%;width:151px;">
+                            <p class="g-pstyle2">Private Non-Medical</p>
+                        </div>
+                        <div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.9934%;margin-top:-7.6px;left:69.1085%;width:40px;">
+                            <p class="g-pstyle3">4.0</p>
+                        </div>
+                        <div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:29.5128%;margin-top:-9.2px;left:7.8465%;width:146px;">
+                            <p class="g-pstyle2">Public Non-Medical</p>
+                        </div>
+                        <div id="g-ai0-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:33.8817%;margin-top:-7.6px;left:69.1085%;width:39px;">
+                            <p class="g-pstyle3">3.0</p>
+                        </div>
+                        <div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:34.2634%;margin-top:-9.2px;left:7.8057%;width:120px;">
+                            <p class="g-pstyle2">Private Medical</p>
+                        </div>
+                        <div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:39.014%;margin-top:-9.2px;left:7.8465%;width:114px;">
+                            <p class="g-pstyle2">Public Medical</p>
+                        </div>
+                        <div id="g-ai0-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:39.7266%;margin-top:-9.2px;right:50.9019%;width:76px;">
+                            <p class="g-pstyle4">Varicella</p>
+                        </div>
+                        <div id="g-ai0-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:39.7266%;margin-top:-9.2px;left:85.8661%;width:53px;">
+                            <p class="g-pstyle2">Polio</p>
+                        </div>
+                        <div id="g-ai0-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:40.77%;margin-top:-7.6px;left:69.1085%;width:40px;">
+                            <p class="g-pstyle3">2.0</p>
+                        </div>
+                        <div id="g-ai0-13" class="g-ai2html-settings g-aiAbs" style="top:46.0808%;left:4.3327%;width:32.7419%;">
+                            <p><span class="g-cstyle0">Dewey County </span>has the highest exemption rate with <span class="g-cstyle0">4.7%</span> of its students having a recorded vaccination exemption on file.</p>
+                        </div>
+                        <div id="g-ai0-14" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:47.6583%;margin-top:-7.6px;left:69.1085%;width:38px;">
+                            <p class="g-pstyle3">1.0</p>
+                        </div>
+                        <div id="g-ai0-15" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:71.0805%;margin-top:-9.2px;right:50.8948%;width:60px;">
+                            <p class="g-pstyle4">Hep A</p>
+                        </div>
+                        <div id="g-ai0-16" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:71.0805%;margin-top:-9.2px;left:85.8661%;width:56px;">
+                            <p class="g-pstyle2">MMR</p>
+                        </div>
+                        <div id="g-ai0-17" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:88.4202%;margin-top:-9.2px;left:67.4849%;margin-left:-30.5px;width:61px;">
+                            <p class="g-pstyle1">Hep B</p>
+                        </div>
+                        <div id="g-ai0-18" class="g-ai2html-settings g-aiAbs" style="top:93.1116%;left:3.6221%;width:80.6452%;">
+                            <p class="g-pstyle5"><span class="g-cstyle1">Graphic </span>Andrew Williams | <span class="g-cstyle1">Source </span>Oklahoma State Department of Health</p>
+                        </div>
+                    </div>
+
+                    <!-- Artboard: Artboard_4 -->
+                    <div id="g-exempt-Artboard_4" class="g-artboard" style="width:490px; height:646px;" data-aspect-ratio="0.759" data-min-width="490" data-max-width="619">
+                        <img id="g-exempt-Artboard_4-img" class="g-aiImg g-aiAbs" alt="" src="exempt-Artboard_4.png" />
+                        <div id="g-ai1-1" class="g-ai2html-settings g-aiAbs" style="top:2.6316%;left:4.1749%;width:89.5918%;">
+                            <p class="g-pstyle0">Students with Vaccination Exemptions</p>
+                        </div>
+                        <div id="g-ai1-2" class="g-ai2html-settings g-aiAbs" style="top:6.192%;left:4.1749%;width:92.6531%;">
+                            <p>Students with vaccination exemptions usually require them for non-medical reasons. Nearly 2% of public school students and 3% of private school students have non-medical vaccination exemptions for all types of vaccines.</p>
+                        </div>
+                        <div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.7568%;margin-top:-9.2px;left:48.074%;margin-left:-27.5px;width:55px;">
+                            <p class="g-pstyle1">DTaP</p>
+                        </div>
+                        <div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:20.5328%;margin-top:-7.6px;left:50.0965%;width:40px;">
+                            <p class="g-pstyle2">4.0</p>
+                        </div>
+                        <div id="g-ai1-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:25.022%;margin-top:-7.6px;left:50.0965%;width:39px;">
+                            <p class="g-pstyle2">3.0</p>
+                        </div>
+                        <div id="g-ai1-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:28.8311%;margin-top:-9.2px;right:75.2228%;width:76px;">
+                            <p class="g-pstyle3">Varicella</p>
+                        </div>
+                        <div id="g-ai1-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:28.8311%;margin-top:-9.2px;left:71.3%;width:53px;">
+                            <p class="g-pstyle4">Polio</p>
+                        </div>
+                        <div id="g-ai1-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:29.5111%;margin-top:-7.6px;left:50.0965%;width:40px;">
+                            <p class="g-pstyle2">2.0</p>
+                        </div>
+                        <div id="g-ai1-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:34.0002%;margin-top:-7.6px;left:50.0965%;width:38px;">
+                            <p class="g-pstyle2">1.0</p>
+                        </div>
+                        <div id="g-ai1-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:49.2646%;margin-top:-9.2px;right:75.2138%;width:60px;">
+                            <p class="g-pstyle3">Hep A</p>
+                        </div>
+                        <div id="g-ai1-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:49.2646%;margin-top:-9.2px;left:71.3%;width:56px;">
+                            <p class="g-pstyle4">MMR</p>
+                        </div>
+                        <div id="g-ai1-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:60.5649%;margin-top:-9.2px;left:48.0421%;margin-left:-30.5px;width:61px;">
+                            <p class="g-pstyle1">Hep B</p>
+                        </div>
+                        <div id="g-ai1-13" class="g-ai2html-settings g-aiAbs" style="top:65.3251%;left:46.5025%;width:41.4286%;">
+                            <p><span class="g-cstyle0">Dewey County </span>has the highest exemption rate with <span class="g-cstyle0">4.7%</span> of its students having a recorded vaccination exemption on file.</p>
+                        </div>
+                        <div id="g-ai1-14" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:66.7568%;margin-top:-9.2px;left:15.5909%;width:151px;">
+                            <p class="g-pstyle5">Private Non-Medical</p>
+                        </div>
+                        <div id="g-ai1-15" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:69.8528%;margin-top:-9.2px;left:15.6425%;width:146px;">
+                            <p class="g-pstyle5">Public Non-Medical</p>
+                        </div>
+                        <div id="g-ai1-16" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:72.9488%;margin-top:-9.2px;left:15.5909%;width:120px;">
+                            <p class="g-pstyle5">Private Medical</p>
+                        </div>
+                        <div id="g-ai1-17" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:76.0447%;margin-top:-9.2px;left:15.6425%;width:114px;">
+                            <p class="g-pstyle5">Public Medical</p>
+                        </div>
+                        <div id="g-ai1-18" class="g-ai2html-settings g-aiAbs" style="top:94.1176%;left:8.8222%;width:82.449%;">
+                            <p class="g-pstyle6"><span class="g-cstyle1">Graphic </span>Andrew Williams | <span class="g-cstyle1">Source </span>Oklahoma State Department of Health</p>
+                        </div>
+                    </div>
+
+                    <!-- Artboard: Artboard_5 -->
+                    <div id="g-exempt-Artboard_5" class="g-artboard" style="width:375px; height:880.799999999997px;" data-aspect-ratio="0.426" data-min-width="375" data-max-width="489">
+                        <img id="g-exempt-Artboard_5-img" class="g-aiImg g-aiAbs" alt="" src="exempt-Artboard_5.png" />
+                        <div id="g-ai2-1" class="g-ai2html-settings g-aiAbs" style="top:1.2489%;left:3.0552%;width:92.2667%;">
+                            <p class="g-pstyle0">Students with Vaccination Exemptions</p>
+                        </div>
+                        <div id="g-ai2-2" class="g-ai2html-settings g-aiAbs" style="top:3.8601%;left:3.0552%;width:94.6667%;">
+                            <p>Nearly 2% of public school students and 3% of private school students have non-medical vaccination exemptions for all types of vaccines.</p>
+                        </div>
+                        <div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:11.6087%;margin-top:-9.2px;left:50.0167%;margin-left:-27.5px;width:55px;">
+                            <p class="g-pstyle1">DTaP</p>
+                        </div>
+                        <div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:14.3781%;margin-top:-7.6px;left:52.6594%;width:40px;">
+                            <p class="g-pstyle2">4.0</p>
+                        </div>
+                        <div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:17.6705%;margin-top:-7.6px;left:52.6594%;width:39px;">
+                            <p class="g-pstyle2">3.0</p>
+                        </div>
+                        <div id="g-ai2-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:20.4642%;margin-top:-9.2px;right:80.4245%;width:76px;">
+                            <p class="g-pstyle3">Varicella</p>
+                        </div>
+                        <div id="g-ai2-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:20.4642%;margin-top:-9.2px;left:80.3654%;width:53px;">
+                            <p class="g-pstyle4">Polio</p>
+                        </div>
+                        <div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:20.9629%;margin-top:-7.6px;left:52.6594%;width:40px;">
+                            <p class="g-pstyle2">2.0</p>
+                        </div>
+                        <div id="g-ai2-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:24.2554%;margin-top:-7.6px;left:52.6594%;width:38px;">
+                            <p class="g-pstyle2">1.0</p>
+                        </div>
+                        <div id="g-ai2-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:35.4506%;margin-top:-9.2px;right:80.4128%;width:60px;">
+                            <p class="g-pstyle3">Hep A</p>
+                        </div>
+                        <div id="g-ai2-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:35.4506%;margin-top:-9.2px;left:80.3654%;width:56px;">
+                            <p class="g-pstyle4">MMR</p>
+                        </div>
+                        <div id="g-ai2-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:43.7385%;margin-top:-9.2px;left:49.975%;margin-left:-30.5px;width:61px;">
+                            <p class="g-pstyle1">Hep B</p>
+                        </div>
+                        <div id="g-ai2-13" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:47.4851%;margin-top:-9.2px;left:36.6388%;width:151px;">
+                            <p class="g-pstyle5">Private Non-Medical</p>
+                        </div>
+                        <div id="g-ai2-14" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:49.7558%;margin-top:-9.2px;left:36.7063%;width:146px;">
+                            <p class="g-pstyle5">Public Non-Medical</p>
+                        </div>
+                        <div id="g-ai2-15" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:52.0265%;margin-top:-9.2px;left:36.6388%;width:120px;">
+                            <p class="g-pstyle5">Private Medical</p>
+                        </div>
+                        <div id="g-ai2-16" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:54.2971%;margin-top:-9.2px;left:36.7063%;width:114px;">
+                            <p class="g-pstyle5">Public Medical</p>
+                        </div>
+                        <div id="g-ai2-17" class="g-ai2html-settings g-aiAbs" style="top:58.8102%;left:5.8667%;width:90.6667%;">
+                            <p><span class="g-cstyle0">Dewey County </span>has the highest exemption rate with <span class="g-cstyle0">4.7%</span> of its students having a recorded vaccination exemption on file.</p>
+                        </div>
+                        <div id="g-ai2-18" class="g-ai2html-settings g-aiAbs" style="top:93.5513%;left:3.0552%;width:69.0667%;">
+                            <p class="g-pstyle6"><span class="g-cstyle1">Graphic </span>Andrew Williams</p>
+                            <p class="g-pstyle6"><span class="g-cstyle1">Source </span>Oklahoma State Department of Health</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- End ai2html - 2019-09-15 21:36 -->
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="story-body">
+        <p class="body-text serif">
+            To prevent the spread of diseases, health officials say certain percentages of immunity in a population should be achieved. Each disease has its own “herd immunity” rate – from 92% to 95% for measles, for example. The percentages in the map refer to kindergarteners who are up to date on all required vaccines – that is, for multiple diseases – so cannot be compared to a single disease’s “herd immunity” rate.</p>
+    </div>
+
+</body>
+
+<script type="text/javascript">
+    (function() {
+        // only want one resizer on the page
+        if (document.documentElement.className.indexOf("g-resizer-v3-init") > -1) return;
+        document.documentElement.className += " g-resizer-v3-init";
+        // require IE9+
+        if (!("querySelector" in document)) return;
+
+        function resizer() {
+            var elements = Array.prototype.slice.call(document.querySelectorAll(".g-artboard[data-min-width]")),
+                widthById = {};
+            elements.forEach(function(el) {
+                var parent = el.parentNode,
+                    width = widthById[parent.id] || parent.getBoundingClientRect().width,
+                    minwidth = el.getAttribute("data-min-width"),
+                    maxwidth = el.getAttribute("data-max-width");
+                widthById[parent.id] = width;
+                if (+minwidth <= width && (+maxwidth >= width || maxwidth === null)) {
+                    el.style.display = "block";
+                } else {
+                    el.style.display = "none";
+                }
+            });
+            try {
+                if (window.parent && window.parent.$) {
+                    window.parent.$("body").trigger("resizedcontent", [window]);
+                }
+                if (window.require) {
+                    require(['foundation/main'], function() {
+                        require(['shared/interactive/instances/app-communicator'], function(AppCommunicator) {
+                            AppCommunicator.triggerResize();
+                        });
+                    });
+                }
+            } catch (e) {
+                console.log(e);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', resizer);
+        // feel free to replace throttle with _.throttle, if available
+        window.addEventListener('resize', throttle(resizer, 200));
+
+        function throttle(func, wait) {
+            // from underscore.js
+            var _now = Date.now || function() {
+                    return new Date().getTime();
+                },
+                context, args, result, timeout = null,
+                previous = 0;
+            var later = function() {
+                previous = _now();
+                timeout = null;
+                result = func.apply(context, args);
+                if (!timeout) context = args = null;
+            };
+            return function() {
+                var now = _now(),
+                    remaining = wait - (now - previous);
+                context = this;
+                args = arguments;
+                if (remaining <= 0 || remaining > wait) {
+                    if (timeout) {
+                        clearTimeout(timeout);
+                        timeout = null;
+                    }
+                    previous = now;
+                    result = func.apply(context, args);
+                    if (!timeout) context = args = null;
+                } else if (!timeout && options.trailing !== false) {
+                    timeout = setTimeout(later, remaining);
+                }
+                return result;
+            };
+        }
+
+    })();
+
+</script>
+
+</html>
