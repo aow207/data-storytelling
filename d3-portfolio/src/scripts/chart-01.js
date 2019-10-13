@@ -76,11 +76,11 @@ function ready(datapoints) {
   // Title
   svg
     .append('text')
-    .attr('x', width / 2)
-    .attr('dx', 25)
+    .attr('x', 0)
+    .attr('dx', 100)
     .attr('y', 0 - margin.top / 3)
     .attr('text-anchor', 'middle')
-    .style('font-size', '18px')
+    .style('font-size', '12px')
     .style('font-weight', '600')
     .style('fill', '#4A555A')
     .text('Madonna Year-End Billboard Chart Rankings')
@@ -94,14 +94,30 @@ function ready(datapoints) {
     .style('font-size', '10px')
     .text('Year')
 
-  // svg
-  //   .append('text')
-  //   .attr('x', 0)
-  //   .attr('y', 1)
-  //   .attr('dy', -3)
-  //   .style('text-anchor', 'end')
-  //   // .attr('transform', 'rotate(-65)')
-  //   .text('Rank')
+  const annotations = [
+    {
+      note: {
+        title: 'Evita',
+        label: 'Madonna sang this as Eva Perón in the movie adaptation'
+      },
+      data: { Year: 1997, Rank: 87 },
+      // y: 200,
+      // x: 100,
+      dx: 80,
+      dy: -30,
+      color: '#81B0D4'
+    }
+  ]
+
+  const makeAnnotations = d3Annotation
+    .annotation()
+    .accessors({
+      x: d => xPositionScale(d.Year),
+      y: d => yPositionScale(d.Rank)
+    })
+    .annotations(annotations)
+
+  svg.call(makeAnnotations)
 
   // Making Axes
 

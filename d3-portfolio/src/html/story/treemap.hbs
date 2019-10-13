@@ -1,6 +1,6 @@
 <div class="story-body">
-    <h2>Rats of NYC</h2>
-    <p>Lorem Ipsum Orwhateva.</p>
+    <h2>Rats of NYC (2010 - 2018)</h2>
+    <p>A correction of my terrible line charts from <a href='https://drewoday.com/rats/' target="_blank">this project</a>. Please forgive my temporary insanity. This treemap shows total rat sightings from 2010 to 2018 in NYC based on 311 data.</p>
     <div id="chart-2"></div>
 </div>
 
@@ -33,7 +33,7 @@ const tip = d3
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d) {
-    return `<div class='charts'><strong>Name:</strong> <span style='color:white'>${d.name}</span><br><strong>Value:</strong> <span style='color:#87C0B0'>${d.value}</span></div>`
+    return `<div class='charts'><span style='color:#87C0B0'>${d.value}</span><strong> Rat Sightings</strong></div>`
   })
 
 svg.call(tip)
