@@ -1,0 +1,87 @@
+<div class="story-body">
+    <h2>Rats of NYC</h2>
+    <p>Lorem Ipsum Orwhateva.</p>
+    <div id="chart-2"></div>
+</div>
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+<link rel="stylesheet" href="//rawgithub.com/Caged/d3-tip/master/examples/example-styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js" integrity="sha256-ogObh+UTVtdRC6Axr1eizQIhPsrWtCCZAWgaonfB2/g=" crossorigin="anonymous"></script>
+
+<script>
+    
+// set the dimensions and margins of the graph
+var margin = {top: 10, right: 10, bottom: 10, left: 10},
+  height = 400 - margin.top - margin.bottom,
+  width = 700 - margin.left - margin.right
+
+// append the svg object to the body of the page
+var svg = d3.select("#chart-2")
+.append("svg")
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+.append("g")
+  .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")");
+
+
+// D3 Tip
+
+const tip = d3
+  .tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return `<div class='charts'><strong>Name:</strong> <span style='color:white'>${d.name}</span><br><strong>Value:</strong> <span style='color:#87C0B0'>${d.value}</span></div>`
+  })
+
+svg.call(tip)
+
+// Read data
+d3.csv('https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_hierarchy_1level.csv', function(data) {
+    console.log(data)
+
+  // stratify the data: reformatting for d3.js
+  var root = d3.stratify()
+    .id(function(d) { return d.name; })
+    .parentId(function(d) { return d.parent; })
+    (data);
+  root.sum(function(d) { return +d.value })
+
+  // Then d3.treemap computes the position of each element of the hierarchy
+  // The coordinates are added to the root object above
+  d3.treemap()
+    .size([width, height])
+    .padding(4)
+    (root)
+
+console.log(root.leaves())
+  // use this information to add rectangles:
+  svg
+    .selectAll("rect")
+    .data(root.leaves())
+    .enter()
+    .append("rect")
+      .attr('x', function (d) { return d.x0; })
+      .attr('y', function (d) { return d.y0; })
+      .attr('width', function (d) { return d.x1 - d.x0; })
+      .attr('height', function (d) { return d.y1 - d.y0; })
+      .style("stroke", "none")
+      .style("fill", "#69b3a2")
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide)
+
+  // and to add the text labels
+  svg
+    .selectAll("text")
+    .data(root.leaves())
+    .enter()
+    .append("text")
+      .attr("x", function(d){ return d.x0+10})    // +10 to adjust position (more right)
+      .attr("y", function(d){ return d.y0+20})    // +20 to adjust position (lower)
+      .text(function(d){ return d.data.name})
+      .attr("font-size", "15px")
+      .attr("fill", "white")
+})
+</script>
