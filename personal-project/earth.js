@@ -1,4 +1,4 @@
-// Tutorial by Bjorn Sandvik -  http://thematicmapping.org
+// Used tutorial from Bjorn Sandvik -  http://thematicmapping.org, Thank you!
 (function () {
 
     // Insert into HTML id
