@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.webgl-error {
+    font: 15px/30px monospace;
+    text-align: center;
+    color: #fff;
+    margin: 50px;
+}
+
+.webgl-error a {
+    color: #ffffff;
+}
+
+.annotation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin-left: 15px;
+    margin-top: 15px;
+    padding: 1em;
+    width: 600px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: .5em;
+    font-size: 14px;
+    line-height: 1.2;
+    transition: opacity .5s;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+p:first-child {
+    font-size: 34px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn-group button {
+    background-color: #3170AD;
+    border: 1px solid #3170AD;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: darkslategray;
+}
+
+.fab {
+    padding-right: .6em;
+}
