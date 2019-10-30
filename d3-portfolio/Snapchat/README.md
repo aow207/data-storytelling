@@ -1,8 +1,18 @@
 SNAPCHAT POLITICAL AD LIBRARY REPORT
 
-This file contains the information for political ads that are/have been served on Snapchat’s Advertising platform.
+This project contains the information for political ads that are/have been served on Snapchat’s Advertising platform.
 
-Fields:
+This data was released by Snapchat as a part of its Transparency political and advocacy ad report which can be accessed here.
+
+Checkout my data visualization analysis.
+
+-----
+
+Information about the main dataset:
+
+Fields
+------
+
 AD ID - Unique identifier for each Political Ad
 
 CreativeURL - URL link to creative content for the Ad
@@ -58,4 +68,4 @@ Targeting Geo-Postal Code - Postal code(s) targeting criteria used in the Ad. If
 CreativeProperties - URL attachments specified in Ad’s call to action
 
 
-To learn more about our policy on political advertising visit https://www.snap.com/en-US/ad-policies/political/
+To learn more about Snapchat's policy on political advertising visit https://www.snap.com/en-US/ad-policies/political/
