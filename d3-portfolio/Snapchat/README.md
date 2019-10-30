@@ -1,12 +1,12 @@
 SNAPCHAT POLITICAL AD LIBRARY REPORT
+----
 
 This project contains the information for political ads that are/have been served on Snapchat’s Advertising platform.
 
-This data was released by Snapchat as a part of its Transparency political and advocacy ad report which can be accessed here.
+This data was released by Snapchat as a part of its transparency political and advocacy ad report which can be accessed [here] (https://www.snap.com/en-US/political-ads/).
 
-Checkout my data visualization analysis.
+Checkout my [data visualization analysis] (https://aow207.github.io/data-storytelling/d3-portfolio/Snapchat/) of this data.
 
------
 
 Information about the main dataset:
 
