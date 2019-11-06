@@ -2,7 +2,6 @@ body {
     margin:auto;
     padding:50px 10px;
     font-family: 'Open Sans', sans-serif;
-    background-color: aliceblue;
 }
 
 img {
@@ -225,36 +224,4 @@ p.caption {
         padding:0;
     }
 
-}
-
-.hover {
-    background-color: #708090;
-    padding: 10px;
-    border-radius: 10px;
-    opacity: .8
-}
-
-a:link {
-    text-decoration: none
-}
-
-a:link,
-a:visited {
-    color: #87c0b0
-}
-
-a:hover {
-    color: teal
-}
-
-a:active {
-    color: #81b0d4
-}
-
-.navbar {
-    background-color: rgba(0, 0, 0, .075) !important;
-}
-
-a.nav-link {
-    color: #6c757d !important;
 }
