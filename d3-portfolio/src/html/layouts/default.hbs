@@ -1,26 +1,28 @@
 <!doctype html>
 <html lang='en'>
+
 <head>
-  <link rel="stylesheet" href="styles/style.css">
-  {{> base/navbar }}
-  {{> base/meta}}
-  {{> base/fonts }}
-  {{> base/analytics }}
-  <title>D3 Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css">
+    {{> base/navbar }}
+    {{> base/meta}}
+    {{> base/fonts }}
+    {{> base/analytics }}
 </head>
+
 <body>
-  <!-- The headline area pulls most of its content from data/meta.json -->
-  {{> base/headline }}
+    <!-- The headline area pulls most of its content from data/meta.json -->
+    {{> base/headline }}
 
-  <main id='content'>
+    <main id='content'>
 
-    {{{body}}}
+        {{{body}}}
 
-    {{> base/footer }}
-  </main>
+        {{> base/footer }}
+    </main>
 
-  <!-- We'll always keep this JS file around -->
-  <script src="scripts/vendor/ai2html-resizer.js"></script>
+    <!-- We'll always keep this JS file around -->
+    <script src="scripts/vendor/ai2html-resizer.js"></script>
 
 </body>
+
 </html>
