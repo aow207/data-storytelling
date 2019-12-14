@@ -10,19 +10,20 @@ body {
 }
 #map {
   position: fixed;
-  width: 50%;
+  width: 80%;
 }
 #features {
-  width: 50%;
-  margin-left: 50%;
+  width: 20%;
+  margin-left: 80%;
   font-family: sans-serif;
   overflow-y: scroll;
-  background-color: #fafafa;
+  background-color: #43424be6;
+    color: floralwhite;
 }
 section {
   padding: 25px 50px;
   line-height: 25px;
-  border-bottom: 1px solid #ddd;
+/*  border-bottom: 1px solid #ddd;*/
   opacity: 0.25;
   font-size: 13px;
 }
@@ -31,5 +32,5 @@ section.active {
 }
 section:last-child {
   border-bottom: none;
-  margin-bottom: 200px;
+  margin-bottom: 1000px;
 }
