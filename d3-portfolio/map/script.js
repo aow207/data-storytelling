@@ -2,61 +2,44 @@ mapboxgl.accessToken = "pk.eyJ1IjoiYXczMjMwIiwiYSI6ImNqdzI5ODZwejB1ZGkzeXFwZHQ5d
 var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/aw3230/ck45gulvp08gn1cp5omwlc6oq",
-  center: [-0.15591514, 51.51830379],
+  center: [-74.005974, 40.712776],
   zoom: 15.5,
   bearing: 27,
   pitch: 45
 });
 
 var chapters = {
-  baker: {
+  statenisland: {
     bearing: 27,
-    center: [-0.15591514, 51.51830379],
+    center: [-74.180780, 40.612780],
     zoom: 15.5,
     pitch: 20
   },
-  aldgate: {
+  staten: {
     duration: 6000,
-    center: [-0.07571203, 51.51424049],
+    center: [-74.179170, 40.615620],
     bearing: 150,
     zoom: 15,
     pitch: 0
   },
-  "london-bridge": {
+  brooklyn: {
     bearing: 90,
-    center: [-0.08533793, 51.50438536],
+    center: [-73.983640, 40.640300],
     zoom: 13,
     speed: 0.6,
     pitch: 40
   },
-  woolwich: {
+  queens: {
     bearing: 90,
-    center: [0.05991101, 51.48752939],
+    center: [-73.827940, 40.781660],
     zoom: 12.3
   },
-  gloucester: {
+  manhattan: {
     bearing: 45,
-    center: [-0.18335806, 51.49439521],
+    center: [-73.985008, 40.749390],
     zoom: 15.3,
     pitch: 20,
     speed: 0.5
-  },
-  "caulfield-gardens": {
-    bearing: 180,
-    center: [-0.19684993, 51.5033856],
-    zoom: 12.3
-  },
-  telegraph: {
-    bearing: 90,
-    center: [-0.10669358, 51.51433123],
-    zoom: 17.3,
-    pitch: 40
-  },
-  "charing-cross": {
-    bearing: 90,
-    center: [-0.12416858, 51.50779757],
-    zoom: 14.3,
-    pitch: 20
   }
 };
 
@@ -72,7 +55,7 @@ window.onscroll = function() {
   }
 };
 
-var activeChapterName = "baker";
+var activeChapterName = "statenisland";
 function setActiveChapter(chapterName) {
   if (chapterName === activeChapterName) return;
 
