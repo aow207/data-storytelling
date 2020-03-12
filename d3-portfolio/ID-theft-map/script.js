@@ -7,7 +7,7 @@ const map = new mapboxgl.Map({
   zoom: 15.5,
   bearing: 27,
   pitch: 45
-})
+}) 
 
 const chapters = {
   active: {
